@@ -30,8 +30,9 @@ const Vertical = ({ id, poster, title, votes }) => (
 
 Vertical.propTypes = {
   id: PropTypes.number.isRequired,
-  poster: PropTypes.string.isRequired,
+  poster: PropTypes.string,
   title: PropTypes.string.isRequired,
   votes: PropTypes.number.isRequired,
 };
+
 export default Vertical;
