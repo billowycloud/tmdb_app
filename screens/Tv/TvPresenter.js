@@ -17,6 +17,7 @@ export default ({ refreshFn, loading, popular, topRated, today, thisWeek }) => (
     <SliderContainer>
       {thisWeek.map((tv) => (
         <Slide
+          isTv={true}
           key={tv.id}
           id={tv.id}
           title={tv.name}
@@ -31,6 +32,7 @@ export default ({ refreshFn, loading, popular, topRated, today, thisWeek }) => (
       <HorizontalSlider title="인기있는 콘텐츠">
         {popular.map((show) => (
           <Vertical
+            isTv={true}
             id={show.id}
             key={show.id}
             poster={show.poster_path}
@@ -42,6 +44,7 @@ export default ({ refreshFn, loading, popular, topRated, today, thisWeek }) => (
       <HorizontalSlider title="평점높은 콘텐츠">
         {topRated.map((show) => (
           <Vertical
+            isTv={true}
             id={show.id}
             key={show.id}
             poster={show.poster_path}
@@ -53,6 +56,7 @@ export default ({ refreshFn, loading, popular, topRated, today, thisWeek }) => (
       <List title="오늘 방영될 TV 프로그램">
         {today.map((tv) => (
           <Horizontal
+            isTv={true}
             key={tv.id}
             id={tv.id}
             title={tv.name}
